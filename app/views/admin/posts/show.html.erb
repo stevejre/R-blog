@@ -1,0 +1,22 @@
+<p>
+  <b>Title:</b>
+  <%=h @post.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @post.body.gsub(/\n/, '<br />') %>
+</p>
+
+<p>
+  <b>Created date:</b>
+  <%=h @post.created_date %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @post.category.category_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_post_path(@post) %>

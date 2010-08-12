@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Posts: User name</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="language" content="EN">
+<meta http-equiv="Expires" content="Sun, 21 September 1998 07:29:02 GMT">
+<%= stylesheet_link_tag 'blog' %>
+<%= javascript_include_tag 'jquery' %>
+</head>
+<body>
+<div id="blogPage">
+    <div id="blogContent">
+        <div id="blogPageLeft">
+            <div id="navBox" class="round">
+                <div style="float: left;">
+                </div>
+            </div>
+            <div id="leftBoxSub" class="round">
+                <div id="leftScoreboardSub">
+                    <div id="scoreboardBox">
+                        <div id="tabsScoreboard">
+                            <div id="cmp" class="tabsScoreboardDiv ui-tabs-panel">
+                                    <h2>Categories</h2>
+                                    <div style="padding-left:20px">
+                                    <% if @categories_list.empty? %>
+                                     No categories found 
+                                    <% else %>
+                                    <% @categories_list.each do |category| %>
+                                   <%= h category.category_name %><BR/>
+                                     <%  @posts_list.each do |post| 
+
+                                       if post.category_id == category.id 
+
+                                     %>
+                                         -&nbsp;&nbsp;<a href="/posts/<%= h post.id %>" class="smalllink"><%= h post.title %></a><br>
+
+
+                                    <%
+                                         end
+                                         end 
+                                         end 
+                                         end
+                                      %>
+                                      
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="leftAd">
+                	<h2>Recent Posts</h2>
+                    <ul>
+                <% if @posts_list.empty? %>
+                 No posts found 
+                <% else %>
+                <%  @posts_list.each do |post|  %>
+                   <li><a href="/posts/<%= h post.id %>"><%= h post.title %></a></li><br />
+
+                 <% 
+                     end 
+                     end
+                 %>
+		    </ul>
+                </div>
+                <div id="leftVideo">
+                	<h2>Archives</h2>
+                	<!-- <select id="BlogArchive1_ArchiveMenu">
+                        <option value="">Archives</option>
+                        <option value="#">July (4)</option>
+                        <option value="#">June (10)</option>
+                        <option value="#">May (11)</option>
+                    </select> !-->
+                </div>
+                <div id="mkoi" style=" float:left;padding-left:10px">
+                <%  if current_user && admin?  %>
+                    <h2>Admin Control</h2> 
+                    <a href="/admin/users">User management</a> <BR />
+                    <a href="/admin/categories">Category management</a> <BR />                      <a href="/admin/posts">Post management</a> <BR />
+                    <a href="/posts">home</a> <BR />
+                <% end %>
+                </div>
+            </div>
+            <div id="topNewsSub" class="round">
+                <div jsdisplay="$this &amp;&amp; $this.size() &amp;&amp; numPreviewItems &gt; 0" class="fc-mem-grid" jstcache="43">
+                </div>
+            </div>
+            <div id="leftFeatureStrip"></div>
+        </div>
+        <div id="blogPageRight">
+            <div id="searchRibbonBox" class="round">
+                <div style="float: right;">
+<% if current_user %>
+                  <% if admin? %><a class="wHeader" href="/admin">Go to admin</a><span class="whiteSpan">&nbsp;/&nbsp;</span> <% end %><%= link_to 'Edit Profile', '', :class => "wHeader" %><span class="whiteSpan">&nbsp;/&nbsp;</span><a class="wHeader" href="/logout">Logout</a>
+<% else %>
+                    <a class="wHeader" href="/signup">Signup</a><span class="whiteSpan">&nbsp;/&nbsp;</span><a class="wHeader" href="/signin">Signin</a>
+<% end %>
+                </div>
+                <div style="float: left; margin-top: 9px;">
+                        <% form_tag('/search', :name=>"search_frm", :id =>"search_frm", :method => "get", :style => "display:inline") do %>
+                        <input style="border: 1px solid rgb(255, 255, 255); float: left; width: 220px; height: 14px; font-size: 0.9em;" name="q" id="q" value="<% if params[:q] %> <%= params[:q] %> <% else %> Search <% end %>" onfocus="javascript:if (this.value=='Search') { this.value=''; }" type="text" onBlur="javascript:if(this.value=='') this.value=this.defaultValue;">
+                        <a href="javascript:document.forms['search_frm'].submit();"><img style="float: left; display: inline;" src="/images/blog_ms_00000g1.gif" alt="Submit" height="18" vspace="0" width="18" align="absmiddle" border="0"></a>
+<% end %>
+                </div>
+            </div>
+            <a name="content"></a>
+            <htsearch content="Schedule of Play"></htsearch>
+            <div id="subPageContent">
+                <div id="subPageCrumbs">Welcome Y Blog</div>
+                <div id="scheduleNavigatorBox" class="round"></div>
+                <div style="float: left; width: 100%; margin-top: 7px;">
+                    <div class="scheduleNavBg"> </div>
+                </div>
+            </div>
+        </div>
+        <br><br><b></b><br>
+<div style="float:left; width:600px">
+<p style="color: green"><%= notice %></p>
+</div>
+
+        <div style="float:left; width:600px">
+<%= yield %>
+        </div>
+        <div style="float:left">&nbsp;</div>
+    </div>
+<%= render :partial => 'shared/footer'%>
+</div>
+</body>
+</html>

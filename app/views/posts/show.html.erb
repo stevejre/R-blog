@@ -1,0 +1,23 @@
+<h2 class="post-title">
+  <%=h @post.title %>
+</h2>
+
+<p>
+  <%= @post.body.gsub(/\n/, '<br />')  %>
+</p>
+
+<p>
+  <%=h @post.created_date.strftime('%m/%d/%Y %I:%M%p') %> | <%=h @post.category.category_name %>
+</p>
+
+<% unless @post.comments.empty? %>
+
+   <h3><%= @post.comments.size %><% if @post.comments.size == 1 %> Comment <% else %> Comments <% end %> </h3>
+   <% @post.comments.each do |comment| %>
+       <p><%= h comment.body %></p>
+   <% end %>
+
+<% end %>
+
+<h3>New Comment</h3>
+<%= render :partial => @comment = Comment.new, :locals => { :button_name => 'Add comment' }%>

@@ -1,0 +1,7 @@
+<h1>Editing user</h1>
+
+<%= error_messages_for :user %>
+
+<%= render :partial => @user, :locals => { :button_name => 'Update' } %>
+
+<%= link_to 'Show', @user %>

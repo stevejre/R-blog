@@ -1,0 +1,21 @@
+<% form_for([:admin,@post]) do |f| %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :created_date %><br />
+    <%= f.date_select :created_date %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= select("post","category_id",Category.all.collect{|p| [ p.category_name, p.id]}, { :include_blank => "Select a category"}) %>
+  </p>
+  <p>
+    <%= f.submit button_name %>
+  </p>
+<% end %>

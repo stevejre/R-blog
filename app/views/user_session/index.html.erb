@@ -1,0 +1,10 @@
+<% if current_user &&  admin? %>
+<h2>Welcome to Admin</h2>
+<div style="float:left">
+<div><a href="/admin/users">User management</div>
+<div><a href="/admin/categories">Categories management</div>
+<div><a href="/admin/posts">Posts management</div>
+</div>
+<% else %>
+<h2>You don't have previllage to see this</h2>
+<% end %>

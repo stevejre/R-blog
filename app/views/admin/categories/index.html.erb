@@ -1,0 +1,22 @@
+<h1>Listing categories</h1>
+<% if @categories.empty? %>
+No categories found <BR />
+<% else %>
+<table>
+  <tr>
+    <th>Category name</th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%=h category.category_name %></td>
+    <td><%= link_to 'Show', [:admin,category] %></td>
+    <td><%= link_to 'Edit', edit_admin_category_path(category) %></td>
+    <td><%= link_to 'Destroy', [:admin,category], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% end %>
+<br />
+
+<%= link_to 'New category', new_admin_category_path %>

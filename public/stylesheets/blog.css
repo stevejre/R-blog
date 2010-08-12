@@ -1,0 +1,61 @@
+*	 			{ font-family:Arial, Helvetica, sans-serif;font-size:12px;}
+body 			{ background:#FFF url(../images/blog_ms_00000t1.jpg) repeat-x top;margin: 0px;padding:0;text-align:center;}
+#cmp h2			{ font-size:16px;margin:0;color:#333;padding-bottom:10px}
+#cmp a 			{ color:#333;text-decoration:none;padding:0;margin:0;font-size:1em;text-decoration:underline }
+#cmp a.active 	{ color:#333;font-weight:bold;text-decoration:none;padding:0;margin:0;font-size:1.1em;}
+#leftAd h2		{ font-size:15px;margin:0;color:#333;padding-bottom:10px}
+#leftAd a 		{ color:#333;text-decoration:none;padding:0;margin:0;font-size:11px;text-decoration:underline }
+#leftAd ul 		{ float:left; list-style:none;margin:0;padding:0;background:none;  }
+#leftAd ul li 	{ float:left;  padding:0;margin:0;overflow:hidden;}
+.post			{ float:left;width:600px}
+.post a 		{ color:#104b8f;text-decoration:none;padding:0;margin:0;font-size:1em;text-decoration:underline }
+.post a.active 	{ color:#333;font-weight:bold;text-decoration:none;padding:0;margin:0;font-size:1.1em;}
+div.fc-thumbnail 	{float:left;}
+.fc-thumbnail img 	{height:32px;width:32px;}
+.fc-thumbnail img 	{border:0 none;height:32px;margin:6px 6px 0 0;width:32px;}
+#mkoi h2		{ font-size:15px;margin:0;color:#333;padding:10px 0}
+#mkoi a 		{ color:#333;text-decoration:none;padding:0;margin:0;font-size:11px;text-decoration:underline }
+.allj h2		{ font-size:15px;margin:0;color:#333;padding:5px 0}
+.allj a 		{ color:#333;text-decoration:none;padding:0;margin:0;font-size:11px;text-decoration:underline }
+#blogPage 		{ width:1005px;margin-right:auto;margin-left:auto;margin-top:0;margin-bottom:0;padding:0;text-align:left;}
+#blogContent 	{ float:left;width:1005px;width:967px !important;padding:10px 19px;background:url(../images/blog_ms_00000t2.png) repeat-y;}
+#blogPageLeft 	{ float:left;width:357px;margin-right:10px;z-index:200;}
+#navBox 		{ float:left;width:347px;width:310px !important;height:208px;height:197px !important;margin:0;padding:11px 20px 0px 17px;background-color:#4d94e7;border:5px solid #a2c7f3;}
+#navBox h2		{ font-size:16px;margin:0;color:#FFF;padding-bottom:10px}
+#navBox a 		{ color:#cde4ff;text-decoration:none;padding:0;margin:0;font-size:1em;text-decoration:underline }
+#navBox a.active { color:#FFF;font-weight:bold;text-decoration:none;padding:0;margin:0;font-size:1.1em;}
+#leftBoxSub 	{ float:left;width:347px;background:#F8F7FA;border:5px solid #a2c7f3;margin-top:10px;overflow:hidden;}
+.round 			{ border-radius:5px 5px 5px 5px;-moz-border-radius:5px 5px 5px 5px;}
+.round 			{ -webkit-border-top-left-radius:10px 10px;-webkit-border-top-right-radius:10px 10px;-webkit-border-bottom-right-radius:10px 10px;-webkit-border-bottom-left-radius:10px 10px;}
+#leftScoreboardSub { float:left;width:347px;width:327px !important;height:197px;height:181px !important;padding:8px 10px;border-bottom:1px solid #a2c7f3;overflow:hidden;}
+#scoreboardBox 	{ float:left;width:325px;height:127px;margin-top:6px;}
+.followround 	{ border-radius:3px 3px 3px 3px;-moz-border-radius:3px 3px 3px 3px;}
+.followround 	{ -webkit-border-top-left-radius:3px 3px;-webkit-border-top-right-radius:3px 3px;-webkit-border-bottom-right-radius:3px 3px;-webkit-border-bottom-left-radius:3px 3px;}
+#leftAd 		{ float:left;width:142px;width:120px !important;height:262px;height:240px !important;padding:10px 12px 12px 10px;border-bottom:1px solid #a2c7f3;border-right:1px solid #a2c7f3;overflow:hidden;}
+#leftAd img 	{ border: solid 1px #003300 !important;}
+#leftVideo 		{ float:left;width:204px;width:184px !important;height:133px;height:113px !important;padding:10px;border-bottom:1px solid #a2c7f3;overflow:hidden;}
+#leftVideo h2	  { margin:0;padding-bottom:10px;font-size:14px}
+#leftVideo select { width:180px}
+#leftFeatureStrip { float:left;width:357px;width:327px !important;height:93px;padding:0px 15px;margin-top:10px;overflow:hidden;}
+#topNewsSub 	{ float:left;width:347px;width:327px !important;height:267px;height:251px !important;background-color:#FFF;border:5px solid #e3e3e3;margin-top:10px;padding:8px 10px;overflow:hidden;}
+#leftWeatherSub { float:left;width:347px;width:327px !important;height:38px;height:22px !important;padding:8px 10px;border-bottom:1px solid #a2c7f3;overflow:hidden;}
+#blogPageRight 	{ float:left;width:600px;z-index:101;overflow:visible;}
+#searchRibbonBox { float:left;width:590px;width:570px !important;height:45px;height:35px !important;padding:5px 10px;background-color:#4d94e7;border:5px solid #a2c7f3;z-index:101;}
+#subPageContent 		{ float:left;width:600px;margin-top:10px;overflow:hidden;z-index:101;}
+#scheduleNavigatorBox 	{ float:left;width:598px;width:580px !important;height:130px;height:112px !important;padding:9px;background-color:#e3e3e3;border:1px solid #c2c2c2;}
+.scheduleNavBg 	{ float:left;height:19px;}
+.whiteSpan 		{ color:#FFF;}
+#subPageCrumbs 	{ float:left;padding-left:15px;height:21px;color:#336633;font-size:1.1em;overflow:hidden;}
+#footer 		{ clear:left;float:left;width:957px;width:937px !important;height:98px;height:78px !important;background:#4d94e7;border:5px solid #a2c7f3;color:#FFF;margin-top:-110px;margin-left:20px;padding:10px;}
+#footerIcons 	{ float:left;width:327px;width:277px !important;height:47px;height:31px !important;color:#FFF;line-height:31px;padding:8px 25px;margin-bottom:21px;}
+a.wFooterNav:link 		{ color:#FFF;display:block;margin-bottom:9px;}
+a.wFooterNav:visited 	{ color:#FFF;display:block;margin-bottom:9px;}
+a.wHeader:link		 	{ color:#FFF;}
+a.wHeader:visited 		{ color:#FFF;}
+#tabsScoreboard 		{ width:327px;height:190px;float:left;overflow:hidden;}
+#tabsScoreboard ul 		{ float:left;width:325px;height:24px;list-style:none;margin:0;padding:0px 0px;overflow:hidden;}
+#tabsScoreboard ul li 		{ float:left;height:24px;padding:0;margin:0;overflow:hidden;}
+#tabsScoreboard ul li a 	{ color:#336633;font-weight:bold;}
+#tabsScoreboard .divider 	{ height:11px;width:2px;background:#82A083;margin:7px 0px 6px 0px;}
+.post-title		{color:#73AFDF;font-size:1.6em; font-weight:normal; margin-bottom:0}
+.post-subhead	{ color:#666; margin:0 0 10px;font-size:12px;line-height:1.3em;}

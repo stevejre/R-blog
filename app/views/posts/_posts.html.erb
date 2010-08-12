@@ -1,0 +1,21 @@
+<% if @posts.empty? %>
+<h2>No posts found</h2>
+<% else %>
+<% @posts.each do |post| %>
+<div class="post">
+<h2 class="post-title"><%=h post.title %></h2>
+<p class="post-subhead">
+<span><%=h post.created_at.strftime('%m/%d/%Y %I:%M%p') %></span>
+<br />
+<span class="postauthor">by admin</span><span class="postcategory">&nbsp;in&nbsp;<a href=""><%=h post.category.category_name %></a></span>
+<br />
+<br />
+<%=  post.body.gsub(/\n/, '<br />')  %>
+<br />
+<br />
+<a href="/posts/<%= post.id %>">Comments(<%= post.comments.size %>)</a>
+</div>
+<% end %>
+<%=  will_paginate @posts, options = {:previous_label => 'Newer', :page_links => false, :next_label => 'Older', :separator => '&nbsp;/&nbsp;' }
+%>
+<% end %>

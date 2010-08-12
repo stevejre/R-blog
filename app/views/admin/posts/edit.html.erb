@@ -1,0 +1,7 @@
+<h1>Editing post</h1>
+
+<%= error_messages_for :post %>
+
+<%= render :partial => @post, :locals => { :button_name => "Update post" } %>
+
+<%= link_to 'Show', [:admin,@post] %> 
